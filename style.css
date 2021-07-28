@@ -1,0 +1,79 @@
+/* card flip */
+
+.card-container {
+  cursor: pointer;
+  height: 150px;
+  perspective: 600;
+  position: relative;
+  width: 150px;
+}
+.card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card .side {
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+.card .back {
+  background: #eaeaed;
+  color: #0087cc;
+  line-height: 150px;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+/* button click effect  */
+
+button {
+  border: 0;
+  background: #0025cc;
+  border-radius: 4px;
+  box-shadow: 5px 5px 0 #009945;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 12px 20px;
+  transition: all 0.1s linear;
+}
+button:active {
+  /*         x-axis y-axis */
+  box-shadow: 16px 16px 0 #a16c0a;
+  transform: translateY(3px);
+  background: #fa3920;
+}
+
+/* <!-- color change transition on hover  --> */
+
+.box {
+  color: white;
+  background: #044412;
+  box-shadow: 16px 16px 0 #22e74d;
+
+  border-radius: 6px;
+  cursor: pointer;
+  height: 95px;
+  line-height: 95px;
+  text-align: center;
+  transition-property: background;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  width: 95px;
+}
+.box:hover {
+  background: #ff7b29;
+  transform: translateY(3px);
+  box-shadow: 16px 16px 0 #754002;
+}
